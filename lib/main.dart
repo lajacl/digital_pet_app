@@ -51,7 +51,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
   @override
   Widget build(BuildContext context) {
     // For the To do task hint: consider defining the widget and name of the tabs here
-    final tabs = ['My Pet', 'Tab 2', 'Tab 3', 'Tab 4'];
+    final tabs = ['My Pet', 'Feed', 'Tab 3', 'Tab 4'];
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -102,7 +102,7 @@ class TabContentTwo extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Flutter Text',
+              'Your pet is hungry',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -115,8 +115,8 @@ class TabContentTwo extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: const Text('Alert Dialog'),
-                      content: const Text('This is an alert from Tab 1.'),
+                      title: const Text('YUM!'),
+                      content: const Text('Your pet was fed!'),
                       actions: <Widget>[
                         TextButton(
                           onPressed: () {
@@ -129,7 +129,7 @@ class TabContentTwo extends StatelessWidget {
                   },
                 );
               },
-              child: Text('Click for alert'),
+              child: Text('Click to Feed'),
             ),
           ],
         ),
