@@ -51,7 +51,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
   @override
   Widget build(BuildContext context) {
     // For the To do task hint: consider defining the widget and name of the tabs here
-    final tabs = ['My Pet', 'Feed', 'Tab 3', 'Tab 4'];
+    final tabs = ['My Pet', 'Feed', 'Play', 'Tab 4'];
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -142,18 +142,12 @@ class TabContentThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple,
+      color: Colors.white,
       child: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('SnackBar activated in 3rd tab!')),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            textStyle: const TextStyle(fontSize: 20),
-          ),
-          child: Text('Click me'),
+        child: Image.network(
+          'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjk1Mi0wNTQuanBn.jpg',
+          width: 150,
+          height: 150,
         ),
       ),
     );
