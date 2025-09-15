@@ -51,7 +51,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
   @override
   Widget build(BuildContext context) {
     // For the To do task hint: consider defining the widget and name of the tabs here
-    final tabs = ['My Pet', 'Feed', 'Play', 'Tab 4'];
+    final tabs = ['My Pet', 'Feed', 'Play', 'Tracker'];
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -161,34 +161,33 @@ class TabContentFour extends StatelessWidget {
       color: Colors.grey,
       child: ListView(
         children: [
-          ListTile(title: Text('ListTile 1')),
-          ListTile(title: Text('ListTile 2')),
           ListTile(
-            leading: Icon(Icons.map),
-            title: Text('Map (ListTile with Image)'),
+            leading: Icon(Icons.sentiment_satisfied),
+            title: Text('Sunday'),
           ),
           ListTile(
-            leading: Icon(Icons.photo_album),
-            title: Text('Album (ListTile with Image)'),
+            leading: Icon(Icons.sentiment_dissatisfied),
+            title: Text('Monday'),
           ),
           ListTile(
-            leading: Icon(Icons.phone),
-            title: Text('Phone (ListTile with Image)'),
+            leading: Icon(Icons.sentiment_neutral),
+            title: Text('Tuseday'),
           ),
-          Card(
-            margin: EdgeInsets.all(8.0),
-            child: Padding(
-              padding: EdgeInsetsGeometry.all(16.0),
-              child: Center(child: Text('Card 1')),
-            ),
+          ListTile(
+            leading: Icon(Icons.sentiment_satisfied),
+            title: Text('Wednesday'),
           ),
-          Card(
-            color: Colors.tealAccent,
-            margin: EdgeInsets.all(8.0),
-            child: Padding(
-              padding: EdgeInsetsGeometry.all(16.0),
-              child: Center(child: Text('Card 2')),
-            ),
+          ListTile(
+            leading: Icon(Icons.sentiment_dissatisfied),
+            title: Text('Thursday'),
+          ),
+          ListTile(
+            leading: Icon(Icons.sentiment_neutral),
+            title: Text('Friday'),
+          ),
+          ListTile(
+            leading: Icon(Icons.sentiment_neutral),
+            title: Text('Satuday'),
           ),
         ],
       ),
